@@ -1,19 +1,19 @@
 
 .all-padding,
 .clients,
-.section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.section,
+.section__team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
         @media screen and (min-width: 768px) {
                 width: 768px;
-                margin-top: 60px;
-                margin-bottom: 60px;
             }
         
             @media screen and (min-width: 1200px) {
                 width: 1200px;
-                margin-top: 94px;
-                margin-bottom: 94px;
+                padding-top: 94px;
+                padding-bottom: 94px;
             }
 }
 .adress {
@@ -33,12 +33,10 @@
 
     @media screen and (min-width: 768px) {
     width: 768px;
-
     }
 
     @media screen and (min-width: 1200px) {
     width: 1200px;
-
     }
 }
 
