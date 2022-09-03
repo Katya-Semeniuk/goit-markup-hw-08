@@ -1,9 +1,20 @@
 
 .all-padding,
 .clients,
-.sectionБ {
-    padding-top: 60px;
-    padding-bottom: 60px;
+.section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+        @media screen and (min-width: 768px) {
+                width: 768px;
+                margin-top: 60px;
+                margin-bottom: 60px;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                width: 1200px;
+                margin-top: 94px;
+                margin-bottom: 94px;
+            }
 }
 .adress {
     font-style: normal;
@@ -22,10 +33,12 @@
 
     @media screen and (min-width: 768px) {
     width: 768px;
+
     }
 
     @media screen and (min-width: 1200px) {
     width: 1200px;
+
     }
 }
 
