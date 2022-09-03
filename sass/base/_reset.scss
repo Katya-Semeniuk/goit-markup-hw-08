@@ -1,0 +1,34 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+
+body {
+    color: $main-color;
+    background-color: $main-white-color;
+    font-family: $primary-font;
+    font-size: $primary-text-size;
+    letter-spacing: 0.03em;
+}

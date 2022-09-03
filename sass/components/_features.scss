@@ -1,0 +1,48 @@
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+    width: calc((100%-30px) / 2);
+}
+}
+
+.features-list .content:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.content {
+    // width: 270px;
+
+}
+
+.features-list .title {
+        text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    line-height: 1.1;
+    font-size: $primary-text-size;
+    text-transform: uppercase;
+}
+
+.clientes .title {
+    color: $main-color;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.clients .p {
+    color: $paragraph-color;
+    line-height: 1.7;
+}
+
+/* icon */
+.icon-bcg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 270px;
+    height: 120px;
+    background-color: #f5f4fa;
+}
