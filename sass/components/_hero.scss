@@ -1,8 +1,9 @@
-.hero {
-    max-width: 1600px;
-    height: 600px;
-    padding: 200px 0;
-    margin: auto;
+.hero-section {
+    // max-width: 1600px;
+    // height: 600px;
+    // padding: 200px 0;
+    // padding: 118px 60px;
+    // margin: auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url("../images/hero-fon.jpg");
@@ -19,13 +20,19 @@
     margin-left: auto;
     // width: 696px;
 
-    color: $main-white-color;
     font-style: normal;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.6;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    
+    color: $main-white-color;
+
+   @include desktop {
+    font-size: 44px;
+    line-height: 1.4;
+}
 }
 
 /*---------- button 1 page---------- */
@@ -33,7 +40,7 @@
     display: inline-block;
     border-radius: 4px;
     padding: 10px 32px;
-    min-width: 216px;
+    // min-width: 216px;
     border: none;
 
     color: $main-white-color;

@@ -10,7 +10,6 @@ p {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -92,14 +91,35 @@ a {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   color: #2196f3;
   text-decoration: none;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
 
-.header__logo {
-  margin-right: 93px;
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 .word-header {
@@ -190,11 +210,7 @@ a {
   margin-right: 10px;
 }
 
-.hero {
-  max-width: 1600px;
-  height: 600px;
-  padding: 200px 0;
-  margin: auto;
+.hero-section {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-fon.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -207,13 +223,19 @@ a {
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  color: #ffffff;
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.4;
+  }
 }
 
 /*---------- button 1 page---------- */
@@ -221,7 +243,6 @@ a {
   display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
-  min-width: 216px;
   border: none;
   color: #ffffff;
   background-color: #2196f3;
