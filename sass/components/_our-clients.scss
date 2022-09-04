@@ -1,12 +1,15 @@
-.clients .section-title {
+ .clients-title {
+    margin-bottom: 30px;
 font-weight: 700;
 font-size: 28px;
 line-height: 1.2;
 text-align: center;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         font-size: 36px;
+        margin-bottom: 50px;
         }
+        
 }
 
 .clients-list {
@@ -15,23 +18,23 @@ text-align: center;
     gap: 30px;
 }
 
-.item-clients {
+.clients-item {
     // width: 170px;
     height: 92px;
             @media screen and (max-width: 479px) {
                     width: calc((100% - 30px) / 2);
                 }
 
-        @media screen and (min-width: 768px) {
+            @include tablet {
             width: calc((100% - 60px) / 3);
             }
         
-            @media screen and (min-width: 1200px) {
+            @include desktop {
             width: calc((100% - 180px) / 6);
             }
 }
 
-.link-clients {
+.clients-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +55,6 @@ text-align: center;
 
 
 
-.link-clients .clients-logo {
+.clients-link .clients-logo {
     fill: currentColor;
 }
