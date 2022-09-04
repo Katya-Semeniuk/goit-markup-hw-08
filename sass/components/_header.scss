@@ -3,7 +3,7 @@
 }
 
 .logo {
-    // margin-right: 93px;
+    
     font-family: $secondary-font;
     font-weight: 700;
     font-size: 24px;
@@ -11,9 +11,13 @@
     color: $color-accent;
     text-decoration: none;
     
-    @include desktop {
-    font-size: 26px;
+    @include tablet {
+    margin-right: 88px;
     }
+    @include desktop {
+    margin-right: 93px;
+    font-size: 26px;
+    }      
     }
 
 .menu-button {
@@ -22,6 +26,9 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    @include tablet {
+        display: none;
+    }
 }
         
 .menu-button .icon-cross {
@@ -44,27 +51,45 @@
     color: #000000;
 }
 
+/* menu-container */
+
+.menu-container {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+}
 .site-nav {
-    // display: flex;
+
     &:hover,
     &:focus {
         color: $color-accent;}
+
+    @include tablet {
+    display: flex;
+    }
 }
 
+.site-nav__item+.site-nav__item {
+    @include tablet {
+            margin-left: 50px;
+    }
 
-// .site-nav__item+.site-nav__item {
-//     margin-left: 50px;
-// }
+}
 
 .site-nav__link {
     display: block;
     padding-top: 10px;
     padding-bottom: 10px;
 
-    color: $main-color;
     font-weight: 500;
-    line-height: 1.1;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: $main-color;
+
     text-decoration: none;
+
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,60 +97,90 @@
         &:focus {
             color: $color-accent;
         }
+        @include tablet {
+            font-size: 14px;
+                line-height: 1.1;
+        }
 }
 
 
 
-// .site-nav__link.currently {
-//     position: relative;
-//     color: $color-accent;
-//     padding-left: 2px;
-//     padding-right: 2px;
+.site-nav__link.currently {
+    @include tablet {
+    position: relative;
+    color: $color-accent;
+    padding-left: 2px;
+    padding-right: 2px;
 
-//     &::after {
-//             content: "";
-//             position: absolute;
-//             bottom: -23px;
-//             right: 0;
+    &::after {
+            content: "";
+            position: absolute;
+            bottom: -23px;
+            right: 0;
     
-//             width: 100%;
-//             height: 4px;
+            width: 100%;
+            height: 4px;
     
-//             background-color: $color-accent;
-//             border-radius: 2px;
-//         }
-// }
+            background-color: $color-accent;
+            border-radius: 2px;
+        }
+                }
+}
 
-// .data {
-//     // display: flex;
-//     margin-left: auto;
-// }
+.data {
+    @include tablet {
+    display: flex;
+    
+    margin-left: auto;}
 
-// .data__item+.data__item {
-//     margin-left: 30px;
-// }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+    flex-direction: column;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    }
+}
 
-// .header__container {
-//     // display: flex;
-//     align-items: center;
-// }
+.data__item+.data__item {
+    @include desktop {
+    margin-left: 30px;
+}
+}
 
-// .data__link {
-//     // display: flex;
-//     align-items: center;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
+.data__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.header__container {
+@include tablet {
+    display: flex;
+    align-items: center;
+}
+}
 
-//     color: $paragraph-color;
-//     font-weight: 500;
-//     line-height: 1.1;
-//     letter-spacing: 0.02em;
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//         &:hover,
-//             &:focus {
-//                 color: $color-accent;
-//             }
-// }
+.data__link {
+    color: $paragraph-color;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+            &:focus {
+                color: $color-accent;
+            }
+                        @include tablet {
+                            font-size: 12px;
+                            line-height: 1.2;
+                        }
+            @include desktop {
+                    display: flex;
+                    align-items: center;
+                    padding-top: 32px;
+                    padding-bottom: 32px;
+
+            font-size: $primary-text-size;
+            line-height: 1.1;
+            }
+}
 
 /* icon */
 .data__link {
@@ -136,4 +191,8 @@
 .icon-phone {
     fill: currentColor;
     margin-right: 10px;
+
+    @media  screen and (max-width: 767px) {
+    display: none;        
+    }
 }
