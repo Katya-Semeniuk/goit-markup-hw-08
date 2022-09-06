@@ -1,24 +1,53 @@
 .hero-section {
     max-width: 1600px;
-    // height: 600px;
-    // padding: 200px 0;
-    // padding: 118px 60px;
-    // margin: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url("../images/hero-fon.jpg");
+    padding: 118px 0;
+
+    background-image: $bcg-gradient,
+        url("../images/hero-fon-mobile-1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: $bcg-color;
     text-align: center;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+                background-image: $bcg-gradient,
+                    url("../images/hero-fon-mobile-2x.jpg");
+            }
+
+    @include tablet {
+            background-image: $bcg-gradient,
+                    url("../images/hero-fon-tablet-1x.jpg");
+                    @media (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: $bcg-gradient,
+                                url("../images/hero-fon-tablet-2x.jpg");
+                        }
+    }
+    @include desktop {
+        background-image: $bcg-gradient,
+                url("../images/hero-fon.jpg");
+                @media (min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: $bcg-gradient,
+                            url("../images/hero-2x.jpg");
+                    }
+    // height: 600px;
+        // padding: 200px 0;
+    
+        // margin: auto;
+    }
 }
 
 .hero-title {
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
-    // width: 696px;
+   
 
     font-style: normal;
     font-weight: 900;
@@ -28,10 +57,14 @@
     text-transform: uppercase;
     
     color: $main-white-color;
+    @include tablet {
+        width: 360px;
+    }
 
    @include desktop {
     font-size: 44px;
     line-height: 1.4;
+    width: 696px;
 }
 }
 
@@ -39,8 +72,8 @@
 .button-hero {
     display: inline-block;
     border-radius: 4px;
-    padding: 10px 32px;
-    // min-width: 216px;
+    padding: 10px 24px;
+    min-width: 200px;
     border: none;
 
     color: $main-white-color;
@@ -60,6 +93,11 @@
     &:hover,
     &:focus {
         background-color: #188ce8;
+    }
+
+    @include desktop {
+    min-width: 216px; 
+    padding: 10px 32px;  
     }
 }
 

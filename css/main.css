@@ -340,12 +340,38 @@ a {
 
 .hero-section {
   max-width: 1600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-fon.jpg");
+  padding: 118px 0;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-fon-mobile-1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #2f303a;
   text-align: center;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-fon-mobile-2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-fon-tablet-1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-fon-tablet-2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-fon.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-2x.jpg");
+  }
 }
 
 .hero-title {
@@ -360,10 +386,16 @@ a {
   text-transform: uppercase;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .hero-title {
+    width: 360px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 44px;
     line-height: 1.4;
+    width: 696px;
   }
 }
 
@@ -371,7 +403,8 @@ a {
 .button-hero {
   display: inline-block;
   border-radius: 4px;
-  padding: 10px 32px;
+  padding: 10px 24px;
+  min-width: 200px;
   border: none;
   color: #ffffff;
   background-color: #2196f3;
@@ -387,6 +420,12 @@ a {
 }
 .button-hero:hover, .button-hero:focus {
   background-color: #188ce8;
+}
+@media screen and (min-width: 1200px) {
+  .button-hero {
+    min-width: 216px;
+    padding: 10px 32px;
+  }
 }
 
 /*  Modal window */
