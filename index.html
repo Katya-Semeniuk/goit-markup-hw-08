@@ -30,6 +30,7 @@
           type="button"
           class="menu-button is-open"
           aria-expanded="false"
+          aria-controls="menu-container"
           data-menu-button
         >
           <svg width="40" height="40" aria-label="Перемикач мобільного меню">
@@ -43,7 +44,7 @@
             ></use>
           </svg>
         </button>
-        <div class="menu-container">
+        <div class="menu-container" id="menu-container" data-menu>
         <nav>
           <ul class="site-nav">
             <li class="site-nav__item">
@@ -77,11 +78,27 @@
             </a>
           </li>
         </ul>
+        <ul class="social-list">
+            <li class="social-list__item">
+              <a href="#" class="social-list__link currently">
+                Instagram
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">Twitter</a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">Facebook</a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">LinkedIn</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
     <main>
-      <!-- <section class="section hero-section">
+       <section class="section hero-section">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button-hero" data-modal-open>
@@ -174,7 +191,7 @@
         </div>
       </section>
 
-      <section class="section">
+
         <div class="container">
           <h2 class="visually-hidden">Feature</h2>
           <ul class="features-list">
@@ -560,7 +577,7 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main>  -->
 
     <!-- <footer class="footer">
       <div class="container footer__container">
@@ -639,6 +656,7 @@
         </div>
       </div>
     </footer> -->
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
