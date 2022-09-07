@@ -4,42 +4,50 @@
 
     background-image: $bcg-gradient,
         url("../images/hero-fon-mobile-1x.jpg");
+        background-image: $bcg-gradient,
+        url("../images/hero-fon-mobile-1x-webp.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: $bcg-color;
     text-align: center;
 
-    @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
+    @include retina {
                 background-image: $bcg-gradient,
                     url("../images/hero-fon-mobile-2x.jpg");
+                    background-image: $bcg-gradient,
+                    url("../images/hero-fon-mobile-2x-webp.webp");
             }
 
     @include tablet {
             background-image: $bcg-gradient,
                     url("../images/hero-fon-tablet-1x.jpg");
-                    @media (min-device-pixel-ratio: 2),
-                        (min-resolution: 192dpi),
-                        (min-resolution: 2dppx) {
+                    background-image: $bcg-gradient,
+                    url("../images/hero-fon-tablet-1x-webp.webp");
+
+                @include retina {
+                        background-image: $bcg-gradient,
+                            url("../images/hero-fon-tablet-2x.jpg");
                             background-image: $bcg-gradient,
-                                url("../images/hero-fon-tablet-2x.jpg");
+                            url("../images/hero-fon-tablet-2x-webp.webp");
                         }
     }
     @include desktop {
+            height: 600px;
+            padding: 200px 0;
+            margin: auto;
+
         background-image: $bcg-gradient,
-                url("../images/hero-fon.jpg");
-                @media (min-device-pixel-ratio: 2),
-                    (min-resolution: 192dpi),
-                    (min-resolution: 2dppx) {
+            url("../images/hero-fon.jpg");
+        background-image: $bcg-gradient,
+            url("../images/hero-fon-webp.");
+                @include retina {
                         background-image: $bcg-gradient,
-                            url("../images/hero-2x.jpg");
+                            url("../images/hero-fon-2x.jpg");
+                        background-image: $bcg-gradient,
+                                url("../images/hero-fon-2x-webp.webp");
                     }
-    // height: 600px;
-        // padding: 200px 0;
-    
-        // margin: auto;
+
     }
 }
 
@@ -47,7 +55,6 @@
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
-   
 
     font-style: normal;
     font-weight: 900;
