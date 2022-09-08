@@ -5,11 +5,13 @@
 }
 .footer__container {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    @media screen and (max-width:767px) {
+    align-items: center;
+    }
     @include desktop {
-    display: flex;
-    align-items: baseline;
+    flex-direction: row;
+    // align-items: baseline;
     }
     
 }
@@ -34,9 +36,12 @@
 }
 
 .adress {
+    @media screen and (max-width:1199px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
 .adress__list:not(:last-child) {
     margin-bottom: 8px;
@@ -69,12 +74,27 @@
 }
 
 .nav-position {
+    @media screen and (max-width:1199px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    
     @include tablet {
         margin-bottom: 0px;
+    }
+}
+.tablet-position {
+    display: flex;
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+        justify-content: space-around;
+        align-items: baseline;
+        margin-bottom: 60px;
     }
 }
 /* social */
@@ -89,14 +109,20 @@
 }
 
 .footer__social {
+    @media screen and (max-width:1199px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    
 
-    @include desktop {
-        margin-bottom: 0px;
-    margin-left: 70px;
+    @include tablet {
+    margin-bottom: 0px;
+    }
+
+    @include desktop {  
+        margin-left: 70px;
     }
     
 }
@@ -135,9 +161,13 @@
 /* form */
 
 .form-box {
+    
+    @media screen and (max-width:1199px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     @include desktop{
     margin-left: auto;
     }
@@ -164,7 +194,7 @@
         
     @include desktop {
     display: flex;
-        justify-content: space-between;
+    flex-direction: row;
         margin-top: 12px;
     }
 
