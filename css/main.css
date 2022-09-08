@@ -334,12 +334,12 @@ a {
   }
 }
 
-.social-list__item {
-  display: flex;
-  padding-right: 10px;
-}
 .social-list__item:not(:last-child) {
+  padding-right: 10px;
   border-right: 1px solid rgba 33, 33, 33, 0.2;
+}
+.social-list__item:not(:first-child) {
+  padding-left: 10px;
 }
 
 .social-list__link {
