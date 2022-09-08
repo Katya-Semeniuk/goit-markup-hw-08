@@ -9,6 +9,9 @@ height: 60px;
 height: 80px;
 }
 }
+.tab-desk-header {
+display: ;
+}
 .logo.header__logo {
     margin-top: 16px;
     font-family: $secondary-font;
@@ -265,14 +268,12 @@ display: flex;
     color: $color-accent;
 }
 
-// .position-bottom {
-//     position: fixed;
-//     left: 40px;
-//     bottom: 48px;
-// }
-
 .mob-menu-position {
     display: flex;
     align-items: center;
+
+    @include tablet  {
+    display: none;   
+    }
 }
 
