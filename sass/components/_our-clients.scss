@@ -19,9 +19,8 @@ text-align: center;
 }
 
 .clients-item {
-    // width: 170px;
     height: 92px;
-            @media screen and (max-width: 479px) {
+            @media screen and (max-width: 767px) {
                     width: calc((100% - 30px) / 2);
                 }
 

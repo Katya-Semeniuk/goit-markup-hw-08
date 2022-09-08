@@ -5,7 +5,13 @@
 }
 .footer__container {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include desktop {
+    display: flex;
     align-items: baseline;
+    }
+    
 }
 .word-footer {
     color: $main-white-color;
@@ -13,16 +19,31 @@
 .logo {
     font-family: $secondary-font;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.7;
+    color: $color-accent;
+
+    @include desktop {
+        font-size: 26px;
+        line-height: 1.2;
+    }
 }
 .footer__logo {
     display: block;
     margin-bottom: 20px;
 }
 
+.adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .adress__list:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include desktop {
     margin-bottom: 9px;
+    }
 }
 
 .adress__link {
@@ -47,6 +68,15 @@
         color: $color-accent;}
 }
 
+.nav-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    @include tablet {
+        margin-bottom: 0px;
+    }
+}
 /* social */
 
 .social__title {
@@ -59,11 +89,22 @@
 }
 
 .footer__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @include desktop {
+        margin-bottom: 0px;
     margin-left: 70px;
+    }
+    
 }
 
 .soc-list {
     display: flex;
+    
+    
 }
 
 .soc-list__item {
@@ -94,7 +135,13 @@
 /* form */
 
 .form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop{
     margin-left: auto;
+    }
+    
 }
 
 .form-box__subtitle {
@@ -105,12 +152,21 @@
     text-transform: uppercase;
 
     color: #ffffff;
+    @media screen and (max-width:1199px) {
+    margin-bottom: 20px; 
+    }
 }
 
 .footer-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+    @include desktop {
     display: flex;
-    justify-content: space-between;
-    margin-top: 12px;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
 
     &.input::placeholder {
             font-size: $secondary-text-size;
@@ -123,7 +179,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 200px;
+    // width: 200px;
     height: 50px;
 
     background: $color-accent;
@@ -162,5 +218,9 @@
     font-size: 16px;
     line-height: 1.3;
     color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (max-width:1199px) {
+            margin-bottom: 20px;
+        }
 }
 
