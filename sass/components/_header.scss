@@ -137,9 +137,10 @@ height: 80px;
 
 
 .site-nav__link.currently {
+    color: $color-accent;
     @include tablet {
     position: relative;
-    color: $color-accent;
+    // color: $color-accent;
     padding-left: 2px;
     padding-right: 2px;
 
@@ -230,6 +231,10 @@ height: 80px;
     
 }
 .data__link.tel {
+@media screen and (max-width:479px) {
+        font-size: 24px;;
+    }
+    
     @media screen and (max-width:767px) {
     color: $color-accent;
     }
@@ -253,6 +258,10 @@ height: 80px;
 /* social-list  */
 .social-list {
 display: flex;
+@media screen and (max-width:479px) {
+flex-wrap: wrap;
+}
+
 
 @include tablet {
     display: none;
@@ -277,7 +286,6 @@ display: flex;
     font-size: 18px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    
     color: $color-accent;
 }
 
