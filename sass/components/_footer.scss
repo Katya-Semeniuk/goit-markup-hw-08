@@ -8,6 +8,7 @@
     }
     @include desktop {
         display: flex;
+        align-items: baseline;
     }
     
 }
@@ -91,6 +92,9 @@
         justify-content: space-around;
         align-items: baseline;
         margin-bottom: 60px;
+    }
+    @include desktop {
+    align-items: baseline;
     }
 }
 /* social */
