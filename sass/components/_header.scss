@@ -189,6 +189,9 @@ height: 80px;
         @include tablet {
         margin-bottom: 10px;
 }
+@include desktop {
+margin-bottom: 0px;
+}
 }
 
 .header__container {
